@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <div class = "box_container">
+        {% for x in range(0,num): %}
+            <div class="boxes"></div>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+
+<style>
+/* created container to have the boxes in and have them behave the same */
+    div.box_container{
+        margin: 2em;
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+/* created boxes properties */
+    .boxes{
+        background-color: {{ color }} ;
+        width: 100px;
+        height: 100px;
+    }
+
+    h1{
+        text-align: center;
+    }
+</style>
