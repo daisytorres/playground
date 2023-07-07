@@ -5,9 +5,9 @@ app = Flask(__name__)    # Create a new instance of the Flask class called "app"
 @app.route('/play/<int:num>') #stacking routes
 
 @app.route('/play/<int:num>/<color>') 
-#as i was creating adding to this, it was losing the one  before (requiring all selectors) 
-#stacking routes above solved this issue but they needs parameters, so added default values so that I would not get an error
-def play(num=3, color="pink"):
+#as i was creating adding to this, it was losing the one before (requiring all selectors) 
+#stacking routes above solved this issue but they need parameters, so added default values so that I would not get an error
+def play(num=3, color='pink'):
 #added default values to my classes as 1 and pink so unless I change those, it default to those settings
     return render_template('index.html', num = num, color = color)
 

@@ -14,7 +14,7 @@
     <div class="container">
         <h1>Welcome!</h1>
         <div class = "box_container">
-        {% for x in range(0,num): %}
+        {% for x in range(num): %}
             <div class="boxes"></div>
         {% endfor %}
         </div>
@@ -33,7 +33,8 @@
 
 /* created boxes properties */
     .boxes{
-        background-color: {{ color }} ;
+        background-color: {{ color }};
+        /* color is following jinja command vs hardcoding color*/
         width: 100px;
         height: 100px;
     }
